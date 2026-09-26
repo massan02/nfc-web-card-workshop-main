@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>まっさん | 村﨑 聖仁のWeb名刺</title>
+    <meta name="description" content="村﨑 聖仁（まっさん）のWeb名刺です。1年目エンジニア。AIの足を引っ張る人。" />
+    <meta name="theme-color" content="#245edc" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 起動演出 -->
+    <div class="boot" id="boot" aria-hidden="true">
+      <div class="boot-bios">
+        <p class="boot-logo">まっさん<sup>xp</sup></p>
+        <div class="boot-bar"><span></span><span></span><span></span></div>
+        <p class="boot-copy">Copyright © Masato Murasaki</p>
+      </div>
+      <div class="boot-welcome">
+        <div class="welcome-band"></div>
+        <div class="welcome-main">
+          <p class="welcome-text">ようこそ</p>
+          <div class="welcome-user">
+            <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />
+            <div>
+              <p class="welcome-user-name">Masato Murasaki</p>
+              <p class="welcome-user-sub">まっさん</p>
+            </div>
+          </div>
+        </div>
+        <div class="welcome-band welcome-band--bottom"></div>
+      </div>
+      <p class="boot-skip">タップでスキップ</p>
+    </div>
+
+    <!-- デスクトップ -->
+    <main class="desktop" id="desktop">
+      <button class="desktop-icon" id="profileIcon" type="button">
+        <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />
+        <span>マイ プロフィール</span>
+      </button>
+
+      <section class="window" id="profileWindow" aria-labelledby="profileName" hidden>
+        <div class="titlebar" id="titlebar">
+          <img class="titlebar-icon" src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />
+          <p class="titlebar-title">マイ プロフィール - まっさん</p>
+          <div class="titlebar-buttons">
+            <button type="button" class="tb-btn" data-action="minimize" aria-label="最小化">
+              <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="1" y="7" width="5" height="2" /></svg>
+            </button>
+            <button type="button" class="tb-btn tb-btn--max" data-action="maximize" aria-label="最大化">
+              <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 1h8v8H1z M2 3v5h6V3z" fill-rule="evenodd" /></svg>
+            </button>
+            <button type="button" class="tb-btn tb-btn--close" data-action="close" aria-label="閉じる">
+              <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 1.5l7 7M8.5 1.5l-7 7" stroke-width="1.8" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <div class="profile-head">
+            <figure class="photo-frame">
+              <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="村﨑 聖仁の写真" />
+            </figure>
+            <div class="identity">
+              <p class="nickname">まっさん</p>
+              <h1 class="name" id="profileName">
+                <ruby>村﨑<rt>むらさき</rt></ruby> <ruby>聖仁<rt>まさと</rt></ruby>
+              </h1>
+              <p class="name-en">Masato Murasaki</p>
+              <p class="role">1年目エンジニア</p>
+              <p class="catch">AIの足を引っ張る人</p>
+            </div>
+          </div>
+
+          <fieldset class="group">
+            <legend>自己紹介</legend>
+            <p>AIが好きです。　使いこなせるようになるために、エンジニアリングの基礎を学ばなければなと...</p>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>活動</legend>
+            <ul class="activity">
+              <li>本でべんきょう</li>
+              <li>つくる（つくらせてみる）</li>
+              <li>コードみる</li>
+            </ul>
+            <p class="note">目立つ実績はありませぬ...</p>
+            <ul class="activity">
+              <li>ローカルLLMお触り中...(text/画像/TTS)</li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <div class="statusbar">
+          <span>1年目エンジニア</span>
+          <span>準備完了</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- スタートメニュー -->
+    <div class="start-menu" id="startMenu" hidden>
+      <div class="start-menu-head">
+        <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />
+        <span>まっさん</span>
+      </div>
+      <ul class="start-menu-list">
+        <li>
+          <button type="button" id="startOpenProfile">
+            <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />マイ プロフィール
+          </button>
+        </li>
+        <li>
+          <a href="https://github.com/massan02" target="_blank" rel="noopener">
+            <svg class="icon-github" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg>GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/massan_default" target="_blank" rel="noopener">
+            <svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>X
+          </a>
+        </li>
+      </ul>
+      <div class="start-menu-foot">
+        <button type="button" id="rebootButton">⏻ 再起動</button>
+      </div>
+    </div>
+
+    <!-- タスクバー -->
+    <nav class="taskbar" aria-label="タスクバー">
+      <button type="button" class="start-button" id="startButton" aria-expanded="false" aria-controls="startMenu">
+        スタート
+      </button>
+      <div class="quick-launch">
+        <a href="https://github.com/massan02" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg>
+        </a>
+        <a href="https://x.com/massan_default" target="_blank" rel="noopener" aria-label="X" title="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+        </a>
+      </div>
+      <div class="task-list">
+        <button type="button" class="task-button" id="taskButton" hidden>
+          <img src="./assets/CF6DC8C3-8344-411E-94BC-FB260DA82E76.PNG" alt="" />
+          <span>マイ プロフィール</span>
+        </button>
+      </div>
+      <div class="tray">
+        <time id="clock"></time>
+      </div>
+    </nav>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
